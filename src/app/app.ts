@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Producte } from './interfaces/producte'; //PER PODER USAR LA intreficie de producte
 
 @Component({
   selector: 'app-root',
@@ -13,8 +14,44 @@ export class App {
   //Els tipus no canvien com funciona el codi --> Ajuden a detectar errors abans d'executar.
   // " undefined is not a function?" --> AIXÒ ES EL QUE VOLEM EVITAR!!!!
 
-  function name(nom:string){
+  /*
+  function saluda(nom){
     return nom.toUpperCase();
   }
-  saluda(42) {
+  saluda(40);
+  --> Parameter 'nom' implicitly has an 'any' type.
+  
+  */
+
+
+
+  /*function saluda(nom:string){
+    return nom.toUpperCase();
+  }
+  saluda(40);
+
+  --> Argument of type 'number' is not assignable to parameter of type 'string'.
+  */
+
+  //TIPUS BASICS
+  nom: string = 'Angular';
+  nom2: string = 'Laravel';
+  versio: number = 20;
+  actiu: boolean = true;
+
+  //ARRAYS TIPATS
+  colors:string[] = ['vermell', 'verd', 'blau'];
+  frameworks: string[] = [this.nom, this.nom2];
+  punts: number[] = [10, 15, 20];
+
+  //TypeScrips infereix el tipus automàticament
+  ciutat = 'Lleida';//string
+  codiP = 25605;//number
+
+  //objecte de tipus Producte
+  producte: Producte = {
+    id: 1,
+    nom: 'PC',
+    preu: 999,
+    dispoonible: true,};
 }
