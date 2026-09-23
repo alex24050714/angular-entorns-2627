@@ -9,3 +9,4 @@ export interface Producte {
     descripcio ?: string //el ? vol dir que és opcional
 
 }
+
