@@ -17,4 +17,6 @@ export class Producte{
     get preuAmbIva(): number{
         return this.preu * 1.21;
     }
+
+    
 }

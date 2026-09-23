@@ -2,6 +2,8 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Producte } from './interfaces/producte'; //PER PODER USAR LA intreficie de producte
 import { Producte as ProducteClass } from './producte'; //Importem la classe Producte amb un alias per evitar conflictes amb la interfície Producte
+import { Jocs } from './models/jocs'
+import { Jocs as JocsClass } from './jocs';
 
 @Component({
   selector: 'app-root',
@@ -76,5 +78,69 @@ export class App {
   //2. MÉTODE descomptre() que retorni el preu amb un 10% de rebaixa
   //3. creeu un nou producte i mostreu el descomptre per consola
   //4. cerqueu la manera de mostrar el descompte amb un popup (alert) i amb un prompt
+
+  jocs: Jocs [] = [
+  {
+    id: 1,
+    nom: 'Zelda',
+    preu: 59.99,
+    stock: true,
+    vendidos: 12.000,
+    descripcio: 'Patata'
+  },
+
+  {
+    id: 2,
+    nom: 'Pokemon',
+    preu: 49.99,
+    vendidos: 50.000,
+    stock: false,
+  },
+
+  {
+    id: 3,
+    nom: 'Spider-man',
+    preu: 79.99,
+    stock: true,
+    vendidos: 100.000,
+    descripcio: 'GOTY',
+  },
+
+  {
+    id: 4,
+    nom: 'GTA VI',
+    preu: 99.99,
+    stock: true,
+    vendidos: 90.000,
+    descripcio: 'Criminal'
+  },
+
+  {
+    id: 5,
+    nom: 'Pokemon Champions',
+    preu: 0.00,
+    stock: true,
+    vendidos: 1,
+    descripcio: 'Sol el jugue el jan perque es masoca',
+  },
+
+  {
+    id: 6,
+    nom: 'Dragon Ball Xenoverse 3',
+    preu: 69.99,
+    stock: true,
+    vendidos: 70.000,
+  }]
+  getActiu(): boolean{
+      return true;
+  }
+
+    findById(id: number): Jocs | undefined{
+        return this.jocs.find(joc => joc.id === id);
+    }
+
+    formatarElement(element: Jocs): string{
+        return `ID: ${element.id}, Nom: ${element.nom}, Preu: ${this.preu}, Stock: ${this.stock}, Vendidos: ${this.vendidos}, Descripcio: ${this.descripcio}`;
+    }
 
 }
