@@ -140,7 +140,7 @@ export class App {
     }
 
     formatarElement(element: Jocs): string{
-        return `ID: ${element.id}, Nom: ${element.nom}, Preu: ${this.preu}, Stock: ${this.stock}, Vendidos: ${this.vendidos}, Descripcio: ${this.descripcio}`;
+        return `ID: ${element.id}, Nom: ${element.nom}, Preu: ${element.preu}, Stock: ${element.stock}, Vendidos: ${element.vendidos}, Descripcio: ${element.descripcio}`;
     }
 
 }
