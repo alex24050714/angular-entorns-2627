@@ -4,10 +4,12 @@ import { Producte } from './interfaces/producte'; //PER PODER USAR LA intreficie
 import { Producte as ProducteClass } from './producte'; //Importem la classe Producte amb un alias per evitar conflictes amb la interfície Producte
 import { Jocs } from './models/jocs'
 import { Jocs as JocsClass } from './jocs';
+import { Tarjetes } from './components/tarjetes/tarjetes';
+import { Perfil } from './components/perfil/perfil';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Tarjetes, Perfil],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

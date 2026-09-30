@@ -6,6 +6,7 @@ export class Cistella {
     private jocsTriats: Jocs[];
     usuari: string;
     preuT: number = 0;
+    total: number = 0;
 
     constructor(usuari: string, cataleg: Jocs[] = []){
         this.usuari = usuari;
