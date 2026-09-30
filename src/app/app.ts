@@ -54,20 +54,20 @@ export class App {
   codiP = 25605;//number
 
   //objecte de tipus Producte
-  producte: Producte = {
+ /* producte: Producte = {
     id: 1,
     nom: 'PC',
     preu: 999,
-    dispoonible: true,};
+    disponible: true,};
   
   producte2: Producte = {
     id: 2,
     nom: 'Ivan',
     preu: 5,
-    dispoonible: false,
-  };
+    disponible: false,
+  };*/
 
-  productes: Producte[] = [this.producte, this.producte2];
+ // productes: Producte[] = [this.producte, this.producte2];
   
   p1 = new ProducteClass('Teclat', 89.99);
   constructor() {

@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './perfil.html',
   styleUrl: './perfil.css',
 })
-export class Perfil {}
+export class Perfil {
+  nom: String = 'Ordinador Gamer Pro';
+}
+
+
