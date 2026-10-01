@@ -1,5 +1,6 @@
 <p>perfil works!</p>
 
+<!--
 <div class="perfil">
     <h2>Eustaquia Gil Perez</h2>
     <p>18 anys</p>
@@ -7,4 +8,20 @@
         M'agraden els gatets com un amic, vull ser entrenadora Pokemon i m'agrade el Hoquei sobre
         Arena i el meu pasatemps preferit es llegir les Pagines Grogues
     </p>
+</div>-->
+
+<div class="perfil">
+    <h2>Nom complet: {{alumne.nom}} {{alumne.cognom}}</h2>
+    <p class="edat"> Edat: {{alumne.edat}} </p>
+    <p class="cicle"> Cicle: {{alumne.cicle}}</p>
+    <p> {{alumne.edat >= 18 ? "Major d'edat": "Menor d'edat"}}</p>
+    <p> Any de naixement: {{2026 - alumne.edat}} </p>
+    <p> Nom cognom en majúscules: {{alumne.nom.toUpperCase()}} {{alumne.cognom.toUpperCase()}}</p>
 </div>
+
+<div class="perfil">
+    <h2>Nom complet: {{nomComplet}}</h2>
+    <p> Inicials: {{inicials}}</p>
+    <p> Generacio: {{generacio}}</p>
+</div>
+
