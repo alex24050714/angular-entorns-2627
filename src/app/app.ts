@@ -26,7 +26,6 @@ export class App {
   saluda(40);
   --> Parameter 'nom' implicitly has an 'any' type.
   
-  */
 
 
 
@@ -37,7 +36,7 @@ export class App {
 
   --> Argument of type 'number' is not assignable to parameter of type 'string'.
   */
-
+/*
   //TIPUS BASICS
   nom: string = 'Angular';
   nom2: string = 'Laravel';
@@ -54,20 +53,22 @@ export class App {
   codiP = 25605;//number
 
   //objecte de tipus Producte
- /* producte: Producte = {
+  producte: Producte = {
     id: 1,
     nom: 'PC',
     preu: 999,
-    disponible: true,};
+    disponible: true,
+    estoc: 5
+  };
   
   producte2: Producte = {
     id: 2,
     nom: 'Ivan',
     preu: 5,
     disponible: false,
-  };*/
-
- // productes: Producte[] = [this.producte, this.producte2];
+    estoc: 3
+  };
+  productes: Producte[] = [this.producte, this.producte2];
   
   p1 = new ProducteClass('Teclat', 89.99);
   constructor() {
@@ -143,6 +144,12 @@ export class App {
 
     formatarElement(element: Jocs): string{
         return `ID: ${element.id}, Nom: ${element.nom}, Preu: ${element.preu}, Stock: ${element.stock}, Vendidos: ${element.vendidos}, Descripcio: ${element.descripcio}`;
-    }
+    }*/
+ ciutats: string[] = ['Barcelona', 'Lleida', 'Girona', 'Tarragona'];
 
+ productes: Producte[] = [{id: 1, nom: 'teclat', preu: 89.99, estoc: 12, categoria: 'periferics'},
+  {id: 2, nom: 'monitor', preu: 350, estoc: 3, categoria: 'pantalles'}
+ ];
+
+ numeros: number[] = [1, 2, 3, 4, 5];
 }
