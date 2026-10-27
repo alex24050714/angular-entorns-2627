@@ -1,12 +1,32 @@
-<h2>BINDINGS EN ANGULAR</h2>
+<h2>BINGINGS EN ANGULAR</h2>
 
-<!--INTERPOLACIÓ : {{}} -> TS HTML (text)-->
-<!--PROPERTY BINDING: [propietat]="expr" TS -> HTML (propietat DOM)-->
+<!-- INTERPOLACIO: TS -> HTML (text)</p> -->
+ <!--PROPERTY BINDING [propietat]="expresio" TS -> HTML (propietat del DOM)-->
+ 
+ +
 
-<!--
-disabled = "true" -> atribut amb text "true" {sempre deshabilitat}
-[disabled] = "true" -> angular evaluarà el booleà true i assignarà aquest booleà a la propietat disabled
--->
+ <!--
+ disabled = "true" -> atribut amb text "true" (sempre deshabilitat)
+ [disabled] = "true" -> angular evaluarà el boolean true i asignara aquest boolean a la propietat disabled
 
-<app-botiga/>
+ 
+ 
+ -->
+
+ <!-- EVENT BINDING: (EVENT) = "sentencia" HTML -> TS M
+  els parentesis diuen a angular: "quan passi el event del DOM sobre X element, executa la sentencia"
+
+  (click) = "afegir(p)" -> click -> crida afegir(p)
+  (dblclick)
+  (input) - cercador en directe de cada tecla dins d'un input
+  (change) - <select>, checkbox - quan es confirma un canvi
+    (keyup.enter) / (keyup.escape) - en deixar anar una tecla, confirmar/cancel·lar
+    (mouseenter) / (mouseleave) - quan el ratoli entra i surt  
+ 
+  -->  
+
+ 
+
+<app-botiga></app-botiga>
+
 <router-outlet />
