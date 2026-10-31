@@ -13,6 +13,7 @@ export class Botiga {
   modeCompacte = false;
   carret: number[]= [];
 
+  afegitAlCarret = false;
   /* crear un metode per mostrar el que hi ha al carret*/
 
   teEstoc(p: ProducteLab): boolean{
@@ -37,7 +38,8 @@ export class Botiga {
   }
 
   afegir(p: ProducteLab) : void {
-    if(this.teEstoc(p)){
+    this.afegitAlCarret = true;
+    if(p && this.teEstoc(p)){
       this.carret.push(p.id);
     }
   }

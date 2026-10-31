@@ -2,22 +2,18 @@
     <h1> {{title}} </h1>
 
     <div class="graella">
-       
-          <h1>[class.nom] = "unica condicio" + [class] = "expressió"</h1>
-          @for (p of productes; track p.id) {
+            <h1>[class.nom] = "unica condicio" + [class] = "expressió"</h1>
+            @for (p of productes; track p.id) {
             <img [src]="imatgeSegura(p)" [alt]="p.nom">
             <!--<article class="fitxa" [class.destacat]="producteDestacat(p)" [class.esgotat]="toEstoc(p)"> -->
-             
-                <article class ="fitxa" [class.destacat]="producteDestacat(p)" [class.esgotat] = "p.estoc === 0">
+            
+                <article class ="fitxa" [class.destacat]="producteDestacat(p)" [class.esgotat] = "p.estoc === 0" [class.confirmat] = "afegitAlCarret">
                 <h2> {{p.nom}}</h2>
                 <p class="preu"> {{p.preu}}</p>
-                <button class="btn-compra" [disabled]="!teEstoc(p)"> Afegir al carrito</button>
+                <button class="btn-compra" [disabled]="afegitAlCarret || !teEstoc(p)" (click)="afegir(p)"> Afegir al carrito</button>
                 <a [href] = "urlFitxa(p)" [title]="'Fitxa de' + p.nom">Veure fitxa producte</a>
-
             </article>
-           
         }
-   
     </div>
 
 
@@ -30,12 +26,9 @@
                 <p class="preu"> {{p.preu}}</p>
                 <button class="btn-compra" [disabled]="!teEstoc(p)"> Afegir al carrito</button>
             </article>
-           
         }
-   
     </div>
 
-   
     <div class="graella">
         <h1>[style] estils inline calcultats </h1>
         @for (p of productes; track p.id) {
@@ -46,11 +39,7 @@
                     [style.color]="p.preu>500 ? '#C0000' : 'blue'"> {{p.preu}}</p>
                 <button class="btn-compra" [disabled]="!teEstoc(p)" (click)="afegir(p)"> Afegir al carrito</button>
             </article>
-           
         }
-   
     </div>
-
-
 
 </section>
